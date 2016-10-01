@@ -1,6 +1,6 @@
 public class Calculator {
 
-	//check possibility of the String -> Double conversion
+	//check possibility of the "String -> Double" conversion
 	public static boolean checkString(String string) {
 	        try {
 	            Double.parseDouble(string);
