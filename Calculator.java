@@ -28,8 +28,7 @@ public class Calculator {
 			if(num2 == 0) {
 				System.out.println("Dividind by zero");
 			}
-			else System.out.println("Division = " + num1/num2);
-			
+			else System.out.println("Division = " + num1/num2);			
 		}
 	}
 }
