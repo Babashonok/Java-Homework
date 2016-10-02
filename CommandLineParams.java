@@ -1,3 +1,7 @@
+/**
+ * output parameters from command line in reverse order 
+ * Babak Alexey
+ */
 public class CommandLineParams {
    //output parameters from command line in reverse order 
    public static void main(String[] args) {
