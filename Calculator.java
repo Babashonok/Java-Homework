@@ -1,3 +1,7 @@
+/**
+ * make 4 simpliest math methods(+*-/) with 2 numbers from command line
+ * Babak Alexey
+ */
 public class Calculator {
 
    //check possibility of the "String -> Double" conversion
