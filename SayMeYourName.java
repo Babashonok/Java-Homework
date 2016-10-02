@@ -1,3 +1,7 @@
+/**
+* output string name from command line 
+* Babak Alexey
+*/
 public class SayMeYourName {
    //output string name from command line 
    public static void main(String [] args) {
