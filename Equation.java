@@ -8,7 +8,7 @@ public class Equation {
    /** 
     * check possibility of the "String -> Double" conversion
     * @param string - the string to check,
-    * if string has only double variable  - return true;
+    * if string has only double variable  - return true
     */
    public static boolean checkString(String string) {
       try {
