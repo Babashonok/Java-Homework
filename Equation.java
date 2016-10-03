@@ -5,7 +5,9 @@ import static java.lang.Math.*;
  */
 public class Equation {
 
-   /** check possibility of the "String -> Double" conversion */
+   /** 
+   *check possibility of the "String -> Double" conversion
+   */
    public static boolean checkString(String string) {
       try {
          Double.parseDouble(string);
@@ -15,7 +17,9 @@ public class Equation {
       return true;
    }
 
-   /** solve the quadratic equation */
+   /** 
+   *solve the quadratic equation 
+   */
    public static void main(String [] args) {
       if(args.length != 3) {
          System.out.println("Try to input 3 numbers ( a,b,c)");
