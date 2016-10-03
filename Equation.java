@@ -1,7 +1,7 @@
 import static java.lang.Math.*;
 /**
  * solve the quadratic equation
- * Babak Alexey
+ * @author Babak Alexey
  */
 public class Equation {
 
@@ -32,6 +32,8 @@ public class Equation {
          double x1 = (-b + sqrt(discr))/(2*a);
          double x2 = (-b - sqrt(discr))/(2*a);	
          System.out.println("x1 = " + x1 +" x2 = " + x2);
-      } else System.out.println("it is a linearic equation, try to input coeff a!= 0");
+      } else {
+         System.out.println("it is a linearic equation, try to input coeff a!= 0");
+      }   
    }
 }
