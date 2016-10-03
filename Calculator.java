@@ -32,9 +32,8 @@ public class Calculator {
          double sum = num1 + num2;
          System.out.println("Sum = " + sum);
          System.out.println("Difference = " + (num1-num2));
-         System.out.println("Multiplier = " + num1*num2);
-         double zero = 0.01;
-         if (num2 > -zero && num < zero) {
+         System.out.println("Multiplier = " + num1*num2);         
+         if (num2 > -Double.MIN_VALUE && num < Double.MIN_VALUE) {
             System.out.println("expression has no defined value ");
             System.exit(0);
          } else {
