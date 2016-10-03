@@ -1,7 +1,7 @@
 /**
- * output parameters from command line in reverse order 
- * @author Babak Alexey
- */
+* output parameters from command line in reverse order 
+* @author Babak Alexey
+*/
 public class CommandLineParams {
    /**
    *Output parameters from command line in reverse order. 
