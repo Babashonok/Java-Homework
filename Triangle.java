@@ -5,7 +5,10 @@ import java.util.Scanner;
  */
 public class Triangle {
    /** 
-    *find equalites between sides 
+    * find equalites between sides
+    * @param num0
+    * @param num1
+    * @param num2 all 3 are represent triangle sides
     */
    public static void checkType(Double num0 , Double num1 , Double num2) {
       if (num0.equals(num1) && num0.equals(num2)) {
@@ -15,7 +18,7 @@ public class Triangle {
       } else System.out.println("it is isosceles triangle");
    }
    /**
-    *find type of the triangle 
+    * find type of the triangle 
     */
    public static void main(String [] args) {
       Scanner var = new Scanner(System.in);
