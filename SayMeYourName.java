@@ -1,9 +1,11 @@
 /**
 * output string name from command line 
-* Babak Alexey
+* @author Babak Alexey
 */
 public class SayMeYourName {
-   /** output string name from command line */
+   /** 
+   *output string name from command line 
+   */
    public static void main(String [] args) {
       if(args.length == 0) {
          System.out.println(" Error, try to enter your name next time");
