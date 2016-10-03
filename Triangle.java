@@ -7,10 +7,10 @@ public class Triangle {
    /** 
     *find equalites between sides 
     */
-   public static void checkType(double num0 , double num1 , double num2) {
-      if (num0 == num1 && num0 == num2) {
+   public static void checkType(Double num0 , Double num1 , Double num2) {
+      if (num0.equals(num1) && num0.equals(num2)) {
          System.out.println("it is equilateral triangle");
-      } else if (num0 != num1 && num0 != num2 && num1 != num2) {
+      } else if (!num0.equals(num1) && !num0.equals(num2) && !num1.equals(num2)) {
          System.out.println("it is normal random triangle");
       } else System.out.println("it is isosceles triangle");
    }
@@ -21,8 +21,8 @@ public class Triangle {
       Scanner var = new Scanner(System.in);
       System.out.println("input 3 numeric lengths");
       int numOfSizes = 3; 
-      double [] side = new double[numOfSizes];
-	for (int i = 0 ; i < numOfSizes ; i++) {	  
+      Double [] side = new Double[numOfSizes];
+         for (int i = 0 ; i < numOfSizes ; i++) {	  
          if (var.hasNextDouble() ) {  
             side[i]= var.nextDouble();      
          } else {
