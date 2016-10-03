@@ -33,7 +33,7 @@ public class Calculator {
          System.out.println("Difference = " + (num1-num2));
          System.out.println("Multiplier = " + num1*num2);
          if(Double.isNaN(num1/num2)) {
-            System.out.println("Dividind by zero");
+            System.out.println("expression has no defined value ");
          } else {
             System.out.println("Division = " + num1/num2);
          }
