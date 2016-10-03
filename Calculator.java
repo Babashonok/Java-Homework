@@ -1,8 +1,8 @@
 /**
- * make 4 simpliest math methods(+*-/) with 2 numbers from command line
- * @author Babak Alexey
- *
- */
+* make 4 simpliest math methods(+*-/) with 2 numbers from command line
+* @author Babak Alexey
+*
+*/
 public class Calculator {
 
    /**
