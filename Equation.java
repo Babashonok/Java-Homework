@@ -6,7 +6,9 @@ import static java.lang.Math.*;
 public class Equation {
 
    /** 
-    *check possibility of the "String -> Double" conversion
+    * check possibility of the "String -> Double" conversion
+    * @param string - the string to check,
+    * if string has only double variable  - return true;
     */
    public static boolean checkString(String string) {
       try {
@@ -18,7 +20,7 @@ public class Equation {
    }
 
    /** 
-    *solve the quadratic equation 
+    * solve the quadratic equation 
     */
    public static void main(String [] args) {
       if (args.length != 3) {
