@@ -33,8 +33,8 @@ public class Equation {
          try {
             coeff[i] = convertString(args[i]);
          } catch (Exception e){
-             System.err.println("DataException " + e.getMessage() + " try to input decimal numbers");
-             System.exit(1); 
+            System.err.println("DataException " + e.getMessage() + " try to input decimal numbers");
+            System.exit(1); 
          }  
          if (abs(coeff[i]) < Double.MIN_VALUE || abs(coeff[i]) > Double.MAX_VALUE){
             System.out.println("Try to input 3 numbers in double range");
