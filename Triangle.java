@@ -36,8 +36,7 @@ public class Triangle {
    /**
     * find type of the triangle 
     */
-   public static void main(String [] args) {
-      Scanner var = new Scanner(System.in);
+   public static void main(String [] args) {      
       System.out.println("input 3 numeric lengths");
       int numOfSizes = 3; 
       Double [] side = retype(numOfSizes);     
