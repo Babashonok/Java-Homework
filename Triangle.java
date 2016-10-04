@@ -33,7 +33,9 @@ public class Triangle {
          System.out.println("it is equilateral triangle");
       } else if (!num0.equals(num1) && !num0.equals(num2) && !num1.equals(num2)) {
          System.out.println("it is normal random triangle");
-      } else System.out.println("it is isosceles triangle");
+      } else {
+	 System.out.println("it is isosceles triangle");
+      }
    }
    /**
     * find type of the triangle 
@@ -42,7 +44,6 @@ public class Triangle {
       System.out.println("input 3 numeric lengths");
       int numOfSizes = 3; 
       Double [] side = fillDoubleArray(numOfSizes);    
-    
       for (int i = 0 ; i < numOfSizes ; i++) {	  
          if (side[i] <= 0) {
             System.out.println("wrong input, try to input positive numbers");
