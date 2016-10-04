@@ -8,7 +8,7 @@ public class Triangle {
     * retype Scanner to Double and return the array
     * @param numOfSizes  number of the triangle sides 
     */
-   public static Double[] retype(int numOfSizes) {
+   public static Double[] fillDoubleArray(int numOfSizes) {
       Scanner var = new Scanner(System.in);
       Double [] side = new Double[numOfSizes];
       for (int i = 0 ; i < numOfSizes ; i++) {	  
