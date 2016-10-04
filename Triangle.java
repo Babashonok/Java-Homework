@@ -15,7 +15,8 @@ public class Triangle {
          if (var.hasNextDouble() ) {  
             side[i]= var.nextDouble();      
          } else {
-            side[0]= Double.NEGATIVE_INFINITY;
+            System.out.println("Try to input every number in decimal type");
+            System.exit(1);
          }
       } 
       return side;
