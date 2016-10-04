@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Triangle {
    /**
     * retype Scanner to Double and return the array
+    * and shutdown System if wrong input type
     * @param numOfSizes  number of the triangle sides 
     */
    public static Double[] fillDoubleArray(int numOfSizes) {
