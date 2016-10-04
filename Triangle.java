@@ -40,7 +40,7 @@ public class Triangle {
    public static void main(String [] args) {      
       System.out.println("input 3 numeric lengths");
       int numOfSizes = 3; 
-      Double [] side = retype(numOfSizes);    
+      Double [] side = fillDoubleArray(numOfSizes);    
     
       for (int i = 0 ; i < numOfSizes ; i++) {	  
          if (side[i] <= 0) {
