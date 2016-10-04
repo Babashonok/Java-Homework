@@ -34,7 +34,7 @@ public class Equation {
       for (int i = 0; i < args.length ; i++) {
          coeff[i] = checkString(args[i]);    
          if (abs(coeff[i]) < Double.MIN_VALUE || abs(coeff[i]) > Double.MAX_VALUE){
-            System.out.println("Try to input positive 3 numbers, not letters or other symbols");
+            System.out.println("Try to input  3 numbers, not letters or other symbols");
             System.exit(1);
          }
       }     
