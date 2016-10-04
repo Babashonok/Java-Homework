@@ -10,14 +10,16 @@ public class Equation {
     * @param string  the string to check,
     * if string has only double variable  - return it
     */
-   public static double checkString(String string) {	
+   public static double convertString(String string) {	
       double coeff;
       try {
          coeff = Double.parseDouble(string);
+         return coeff ;
       } catch (Exception e) {
-         return Double.POSITIVE_INFINITY;
-      }
-      return coeff ;
+         System.out.println("Try to input every number in decimal type");
+         System.exit(1);
+         return 0;
+      }      
    }
 
    /** 
@@ -34,7 +36,7 @@ public class Equation {
       for (int i = 0; i < args.length ; i++) {
          coeff[i] = checkString(args[i]);    
          if (abs(coeff[i]) < Double.MIN_VALUE || abs(coeff[i]) > Double.MAX_VALUE){
-            System.out.println("Try to input  3 numbers, not letters or other symbols");
+            System.out.println("Try to input 3 numbers in double range");
             System.exit(1);
          }
       }     
