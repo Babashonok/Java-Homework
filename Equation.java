@@ -8,39 +8,44 @@ public class Equation {
    /** 
     * check possibility of the "String -> Double" conversion
     * @param string  the string to check,
-    * if string has only double variable  - return true
+    * if string has only double variable  - return it
     */
-   public static boolean checkString(String string) {
+   public static double checkString(String string) {	
+      double coeff;
       try {
-         Double.parseDouble(string);
+         coeff = Double.parseDouble(string);
       } catch (Exception e) {
-           return false;
+         return Double.POSITIVE_INFINITY;
       }
-      return true;
+      return coeff ;
    }
 
    /** 
     * solve the quadratic equation 
+    * @param args parameters , which you should input
+    * in command line
     */
    public static void main(String [] args) {
+	double [] coeff = new double[args.length];
       if (args.length != 3) {
          System.out.println("Try to input 3 numbers ( a,b,c)");
-         System.exit(0);
-      } else if (!checkString(args[0]) || !checkString(args[1])|| !checkString(args[2])) {
-         System.out.println("Try to input 3 numbers, not letters or other symbols");
-         System.exit(0);
-      }
-      double a = Double.parseDouble(args[0]);
-      double b = Double.parseDouble(args[1]);
-      double c = Double.parseDouble(args[2]);      
-      double discr = pow(b,2.0) - 4*a*c; //find discriminant
-      double test = 1./a;
+         System.exit(1);
+      }      
+      for (int i = 0; i < args.length ; i++) {
+         coeff[i] = checkString(args[i]);    
+         if (abs(coeff[i]) < Double.MIN_VALUE || abs(coeff[i]) > Double.MAX_VALUE){
+            System.out.println("Try to input positive 3 numbers, not letters or other symbols");
+            System.exit(1);
+         }
+      }     
+      double discr = pow(coeff[1],2.0) - 4*coeff[0]*coeff[2]; //find discriminant
+      double test = 1./coeff[0];
       if (discr < 0) {
          System.out.println("Negative discriminant");
-         System.exit(0);
+         System.exit(1);
       } else if (!Double.isInfinite(test) || !Double.isInfinite(-test)){
-         double x1 = (-b + sqrt(discr))/(2*a);
-         double x2 = (-b - sqrt(discr))/(2*a);	
+         double x1 = (-coeff[1] + sqrt(discr))/(2*coeff[0]);
+         double x2 = (-coeff[1] - sqrt(discr))/(2*coeff[0]);	
          System.out.println("x1 = " + x1 +" x2 = " + x2);
       } else {
          System.out.println("it is a linearic equation, try to input coeff a!= 0");
