@@ -40,11 +40,8 @@ public class Triangle {
    public static void main(String [] args) {      
       System.out.println("input 3 numeric lengths");
       int numOfSizes = 3; 
-      Double [] side = retype(numOfSizes);     
-      if (Double.isInfinite(-side[0])) {
-            System.out.println("wrong input, try to input 3 numbers");
-            System.exit(1);
-      }
+      Double [] side = retype(numOfSizes);    
+    
       for (int i = 0 ; i < numOfSizes ; i++) {	  
          if (side[i] <= 0) {
             System.out.println("wrong input, try to input positive numbers");
