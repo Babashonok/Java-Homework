@@ -4,6 +4,15 @@ import java.util.Scanner;
  * @author Babak Alexey
  */
 public class Triangle {
+   /** 
+    * substitute non number to number    
+    */
+   public static double substitute() {
+       System.out.println("Please, enter decimal number");
+       Scanner var = new Scanner(System.in);
+       return var.nextDouble(); 
+   }
+
    /**
     * retype Scanner to Double and return the array
     * and shutdown System if wrong input type
@@ -16,8 +25,7 @@ public class Triangle {
          if (var.hasNextDouble() ) {  
             side[i]= var.nextDouble();      
          } else {
-            System.out.println("Try to input every number in decimal type");
-            System.exit(1);
+            side[i]= substitute(); 
          }
       } 
       return side;
