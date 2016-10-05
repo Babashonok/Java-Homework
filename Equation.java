@@ -39,7 +39,18 @@ public class Equation {
             System.exit(1);
          }
       }
-   }     
+   } 
+   /**
+    * parse  arguments to double
+    * @param args parameters , which you should input in command line
+    */    
+   public static double [] checkArgs(String [] args) {
+      double [] coeff = new double[args.length];
+      for (int i = 0; i < args.length ; i++) {
+         coeff[i] = Double.parseDouble(args[i]);
+      }
+      return coeff;
+   }
  
    /** 
     * solve the quadratic equation 
@@ -47,15 +58,13 @@ public class Equation {
     * in command line
     */
    public static void main(String [] args) {
-      double [] coeff = new double[args.length];
-      for (int i = 0; i < args.length ; i++) {
-         try {
-            coeff[i] = Double.parseDouble(args[i]);
-         } catch (NumberFormatException e) {
-            System.err.println("NumberFormatException" + e.getMessage() + " try to input decimal numbers");          
-            System.exit(1);
-         }            
-      }  
+      double [] coeff = new double[args.length];      
+      try {
+         coeff = checkArgs(args);
+      } catch (NumberFormatException e) {
+         System.err.println("NumberFormatException" + e.getMessage() + " try to input decimal numbers");          
+         System.exit(1);                  
+      }
       checkErrors(args.length,coeff);
       solveEquation(coeff);
    }
