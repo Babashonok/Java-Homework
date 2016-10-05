@@ -8,9 +8,9 @@ public class Triangle {
     * substitute non number to number    
     */
    public static double substitute() {
-       System.out.println("Please, enter decimal number");
-       Scanner var = new Scanner(System.in);
-       return var.nextDouble(); 
+      System.out.println("Please, enter decimal number");
+      Scanner var = new Scanner(System.in);
+      return var.nextDouble(); 
    }
 
    /**
