@@ -1,33 +1,13 @@
 import static java.lang.Math.*;
 import java.lang.NumberFormatException;
-import java.util.Scanner;
+
 /**
  * solve the quadratic equation
  * @author Babak Alexey
  */
 public class Equation {
 
-   /** 
-    * substitute non number to number    
-    */
-   public static double substitute() {
-       System.out.println("Please, enter decimal number");
-       Scanner var = new Scanner(System.in);
-       return var.nextDouble(); 
-   }
-   /** 
-    * check possibility of the "String -> Double" conversion
-    * @param string  the string to check,
-    * if string has only double variable  - return it
-    */
-   public static double convertString(String string){           
-      try {          
-         return Double.parseDouble(string);
-      } catch (NumberFormatException e) {
-         System.err.println("DataException " + e.getMessage() + " try to input decimal numbers");          
-         return substitute(); 
-      }      
-   }
+   
    /**
     * Finds a roots of equation.
     * @param coeff Quadric equation coefficients
@@ -69,7 +49,12 @@ public class Equation {
    public static void main(String [] args) {
       double [] coeff = new double[args.length];
       for (int i = 0; i < args.length ; i++) {
-         coeff[i] = convertString(args[i]);
+         try {
+            coeff[i] = Double.parseDouble(args[i]);
+         } catch (NumberFormatException e) {
+            System.err.println("NumberFormatException" + e.getMessage() + " try to input decimal numbers");          
+            System.exit(1);
+         }            
       }  
       checkErrors(args.length,coeff);
       solveEquation(coeff);
