@@ -16,8 +16,7 @@ public class DictionaryRule extends ParentRule {
         this.charForm = text.toCharArray();
     }
     /**
-     * return confirment of dictionary word
-     * @return
+     * @return confirment of dictionary word     
      */
     @Override
     public  boolean checkRule(){
