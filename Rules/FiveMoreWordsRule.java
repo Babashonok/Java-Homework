@@ -11,11 +11,11 @@ public class FiveMoreWordsRule extends ParentRule {
      * @param text
      */
     public FiveMoreWordsRule(String text) {
-        super(text);
+        this.charForm = text.toCharArray();
     }
     /**
      * transform char string to boolean array according
-     * separators array
+     * separators array(true if element exists in this array)
      * @return
      */
     private boolean [] transformString() {
