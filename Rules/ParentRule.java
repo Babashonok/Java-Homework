@@ -5,15 +5,7 @@ package bsu.tat.rules;
  */
 public abstract class ParentRule {
     
-    protected char [] charForm;
-
-    /**
-     * basic constructor for evey inheritor
-     * @param text
-     */
-    public  ParentRule(String text) {      
-        this.charForm = text.toCharArray();
-    }
+    private char [] charForm;   
 
     /**
      * abstract method that return confirment of the rules
