@@ -10,7 +10,7 @@ public class NoDigitRule extends ParentRule {
      * @param text
      */
     public NoDigitRule(String text) {
-        super(text);
+        this.charForm = text.toCharArray();
     }
 
     /**
