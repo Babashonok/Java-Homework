@@ -4,16 +4,14 @@ package bsu.tat.rules;
  * abstract parent class for rules
  */
 public abstract class ParentRule {
-
-    protected String stringForm = null;
+    
     protected char [] charForm;
 
     /**
      * basic constructor for evey inheritor
      * @param text
      */
-    public  ParentRule(String text) {
-        this.stringForm = text;
+    public  ParentRule(String text) {      
         this.charForm = text.toCharArray();
     }
 
