@@ -5,13 +5,13 @@ package bsu.tat.rules;
  */
 public class DictionaryRule extends ParentRule {
 
-    private String [] Dictionary ={"one","two","three","four","five"};
+    private String [] Dictionary = {"one","two","three","four","five"};
     /**
      * inherit constructor
      * @param text
      */
     public DictionaryRule(String text) {
-        super(text);
+         this.charForm = text.toCharArray();
     }
     /**
      * return confirment of dictionary word
