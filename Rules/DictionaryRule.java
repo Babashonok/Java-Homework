@@ -6,7 +6,7 @@ package bsu.tat.rules;
 public class DictionaryRule extends ParentRule {
 
     private String [] Dictionary = {"one","two","three","four","five"};
-     protected String stringForm = null;
+    private String stringForm = null;
     /**
      * inherit constructor
      * @param text
