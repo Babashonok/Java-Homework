@@ -30,8 +30,7 @@ public class FiveMoreWordsRule extends ParentRule {
         return tempArray;
     }
     /**
-     * return confirment of 5+ words
-     * @return
+     * @return confirment of 5+ words    
      */
     @Override
     public  boolean checkRule(){
