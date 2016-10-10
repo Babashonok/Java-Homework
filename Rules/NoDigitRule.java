@@ -14,8 +14,7 @@ public class NoDigitRule extends ParentRule {
     }
 
     /**
-     * return confirment of non digit
-     * @return
+     * @return confirment of non digit     
      */
     @Override
     public  boolean checkRule() {
