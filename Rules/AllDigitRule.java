@@ -11,11 +11,10 @@ public class AllDigitRule extends ParentRule {
      * @param text
      */
     public AllDigitRule(String text) {
-        super(text);
+        this.charForm = text.toCharArray();
     }
-    /**
-     * return confirment of all digit
-     * @return
+    /**      
+     * @return confirment of all digit
      */
     @Override
     public  boolean checkRule(){
