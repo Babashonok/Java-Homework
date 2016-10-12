@@ -1,0 +1,52 @@
+package bsu.tat.products;
+
+import java.util.Scanner;
+
+/**
+ * Dialog between user and program
+ * add products and operate with their parameters
+ * @author Alexey Babak
+ */
+public class Products {
+    /**
+     * welcome user and ask how many products
+     * he wants to unput
+     * @return
+     */
+    public static int welcomeUser() {
+        System.out.println("Hello! How many products do you want to input?");
+        Scanner var = new Scanner(System.in);
+        return var.nextInt();
+    }
+    /**
+     * create name which will be compare
+     * with exicting commands
+     * @return
+     */
+    public static String inputCommand() {
+        System.out.println("Please, input commands here ");
+        Scanner var = new Scanner(System.in);
+        return var.nextLine();
+    }
+    /**
+     * entry point of this program
+     * @param args
+     */
+    public static void main(String [] args) {
+        int firstInput = welcomeUser();
+        ProductData [] product = new ProductData[firstInput];
+        for (int i = 0 ; i <firstInput ; i++){
+            System.out.println("product N " +(i + 1));
+            product[i] = new ProductData();
+        }
+        CommandList list = new CommandList().add(new CountAll())
+                                            .add(new CountTypes())
+                                            .add(new AveragePrice())
+                                            .add(new AverageTypePrice(product))
+                                            .add(new ExitFromProject());
+        while(list.waitForNewCommand()) {
+             list.performCommandCall(inputCommand(),product);
+        }
+        System.out.println("This session is ended.");
+    }
+}
