@@ -27,7 +27,6 @@ public class HTMLStructure {
     public String getHeader() {
         return header;
     }
-
     /**
      * @return footer
      */

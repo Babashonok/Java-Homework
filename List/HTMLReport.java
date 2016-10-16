@@ -8,10 +8,10 @@ import java.io.*;
 public class HTMLReport {
     /**
      * copmose HTML page by pieces from HTMLStructure and Table
-     * @param args
-     * @param output
-     * @param input
-     * @throws IOException
+     * @param args input from command line
+     * @param output IP Storage
+     * @param input html page
+     * @throws IOException if file cannot be created
      */
     public void createPage(String [] args,BufferedReader output, FileWriter input) throws IOException {
         HTMLStructure report = new HTMLStructure();

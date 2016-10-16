@@ -19,7 +19,8 @@ public class Table {
      * Constructor that creates pings List, ip List
      * and initialize maxPing variable
      * works with command line and File
-     * @param output
+     * @param output IP Storage
+     * @param args input from command line
      */
     public Table(String[] args,BufferedReader output) throws IOException {
 
@@ -33,8 +34,7 @@ public class Table {
     }
 
     /**
-     * find the largest element in the List
-     * @return
+     * @return largest element in the List
      */
     public int findMaxPing() {
         int tempMax = 0;
@@ -55,8 +55,8 @@ public class Table {
 
     /**
      * create list of IPs and pings using file reading
-     * @param output
-     * @throws IOException
+     * @param output IP Storage
+     * @throws IOException if file doesn't exist
      */
     public void getIPFromFile(BufferedReader output) throws IOException {
         int code = 0;
@@ -70,7 +70,7 @@ public class Table {
     }
     /**
      * create list of IPs and pings using command line input
-     * @param args
+     * @param args input from command line
      */
     public void getIPFromFromCommandLine(String [] args) {
         Random random = new Random();
@@ -83,8 +83,8 @@ public class Table {
 
     /**
      * create a complete string form with colors
-     * @param hash
-     * @return
+     * @param hash counter of ipes
+     * @return String[hash] format
      */
     public  String formString(int hash) {
         if (pings.get(hash)==maxPing) {
