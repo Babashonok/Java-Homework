@@ -42,27 +42,29 @@ public class HTMLReport {
 
     /**
      * copmose HTML page by pieces      *
-     * @param input
-     * @throws IOException
+     * @param input html page
+     * @param curDir path to the IDE Project
+     * @param directory root of .java, html and testing files and directories
+     * @throws IOException if file cannot be created
      */
-    public void createPage(File directory, FileWriter input) throws IOException {
+    public void createPage(String curDir,File directory, FileWriter input) throws IOException {
         getFileList(directory);
-        getFileType();
+        getFileType(curDir);
         input.write(getHeader());
         input.write(getTableStyle());
         input.write(getEndOfHeader());
         input.write(getTableCaption());
         for (int i =0 ; i <files.length ; i++) {
-            Path file = Paths.get(absolutePackagePath+files[i]);
+            Path file = Paths.get(curDir+absolutePackagePath+files[i]);
             BasicFileAttributes attrs = Files.readAttributes(file, BasicFileAttributes.class);
-            input.write(formString(i,attrs));
+            input.write(formString(curDir,i,attrs));
         }
         input.write(getFooter());
     }
 
     /**
      * fill array of file names
-     * @param directory
+     * @param directory root of .java, html and testing files and directories
      */
     public void getFileList(File directory) {
          files = directory.list();
@@ -70,45 +72,47 @@ public class HTMLReport {
 
     /**
      * fill array of file type(FILE or Directory)
+     * @param curDir path to the IDE Project
      */
-    public void getFileType() {
+    public void getFileType(String curDir) {
         type = new String[files.length ];
         for (int i =0 ; i <type.length ; i++) {
-            if (new File(absolutePackagePath+files[i]).isAbsolute()) {
+            if (new File(curDir+absolutePackagePath+files[i]).isAbsolute()) {
                 type[i] = "FILE";
             }
-            if (new File(absolutePackagePath+files[i]).isDirectory()) {
+            if (new File(curDir+absolutePackagePath+files[i]).isDirectory()) {
                 type[i] = "DIR";
             }
         }
     }
     /**
      * create a complete string form with colors
-     * @param hash
-     * @param attrs
+     * @param hash counter of files or directories in root dir
+     * @param attrs class that provides additional methods to work with files
+     * @param curDir path to the IDE Project
      * @return
      */
-    public  String formString(int hash,BasicFileAttributes attrs) {
+    public  String formString(String curDir,int hash, BasicFileAttributes attrs) {
         if (hash % 2 != 1) {
             return "<tr>"+System.lineSeparator() + "<td bgcolor = "+"#EFEFEF> "+files[hash] +"</td>"
                     +"<td bgcolor = "+'"'+"#EFEFEF"+'"'+">"+ type[hash]+" </td>"
                     +"<td bgcolor = "+'"'+"#EFEFEF"+'"'+">"+ convertData(attrs)+" </td>"
-                    +"<td bgcolor = "+'"'+"#EFEFEF"+'"'+">"+ findLength(hash,new File(absolutePackagePath+files[hash]),attrs)+" </td>"
+                    +"<td bgcolor = "+'"'+"#EFEFEF"+'"'+">"+ findLength(hash,new File(curDir+absolutePackagePath+files[hash]),attrs)+" </td>"
                     +System.lineSeparator()+"</tr>" +System.lineSeparator();
         }
         return "<tr>"+System.lineSeparator() + "<td bgcolor = "+"#F7F7F7> "+files[hash] +"</td>"
                 +"<td bgcolor = "+'"'+"#F7F7F7"+'"'+">"+ type[hash]+" </td>"
                 +"<td bgcolor = "+'"'+"#F7F7F7"+'"'+">"+ convertData(attrs)+" </td>"
-                +"<td bgcolor = "+'"'+"#F7F7F7"+'"'+">"+ findLength(hash,new File(absolutePackagePath+files[hash]),attrs)+" </td>"
+                +"<td bgcolor = "+'"'+"#F7F7F7"+'"'+">"+ findLength(hash,new File(curDir+absolutePackagePath+files[hash]),attrs)+" </td>"
                 +System.lineSeparator()+"</tr>" +System.lineSeparator();
     }
 
     /**
      * find size of files or directories
      * size of directory is the sum of all files in it
-     * @param hash
-     * @param directory
-     * @param attrs
+     * @param hash counter of files or directories in root dir
+     * @param directory root of .java, html and testing files and directories
+     * @param attrs class that provides additional methods to work with files
      * @return
      */
     public double findLength(int hash,File directory,BasicFileAttributes attrs) {
@@ -128,7 +132,7 @@ public class HTMLReport {
 
     /**
      * convert date to the dd mm yyyy format
-     * @param attrs
+     * @param attrs class that provides additional methods to work with files
      * @return
      */
     public String convertData(BasicFileAttributes attrs) {

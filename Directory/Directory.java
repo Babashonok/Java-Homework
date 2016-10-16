@@ -7,21 +7,22 @@ import java.io.*;
  * name of file , type , creation date and size
  */
 public class Directory {
-    public static final String absolutePackagePath = "C:\\Documents and Settings\\Admin\\IdeaProjects\\Directory\\src\\tat\\bsu\\dir\\";
+    public static final String absolutePackagePath = File.separator +"src"+File.separator +"tat"+File.separator+"bsu"+File.separator+"dir"+File.separator ;
     /**
      * entry point of the program
-     * @param args
+     * @param args input from command line
      */
     public static void main (String [] args ) throws IOException {
-        File directory = new File(absolutePackagePath);
-        File file = new File(absolutePackagePath+"file.html");
+        String curDir = new File("").getAbsolutePath();
+        File file = new File(curDir+absolutePackagePath+"file.html");
+        File directory = new File(curDir+absolutePackagePath);
         FileWriter input = new FileWriter(file);
         HTMLReport report = new HTMLReport();
         try {
             if (!file.exists()) {
                 file.createNewFile();
             }
-            report.createPage(directory,input);
+            report.createPage(curDir,directory,input);
         } catch (IOException e) {
             e.printStackTrace();
         }
