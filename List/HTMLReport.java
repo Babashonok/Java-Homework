@@ -1,6 +1,8 @@
 package tat.bsu.ip;
 
 import java.io.*;
+import java.util.ArrayList;
+
 /**
  * class has only constructor , that collect
  * Strings from HTMLStructure and Table in one page
@@ -8,20 +10,20 @@ import java.io.*;
 public class HTMLReport {
     /**
      * copmose HTML page by pieces from HTMLStructure and Table
-     * @param args input from command line
-     * @param output IP Storage
+     * @param servers list of servers
      * @param input html page
      * @throws IOException if file cannot be created
      */
-    public void createPage(String [] args,BufferedReader output, FileWriter input) throws IOException {
+    public void createPage(ArrayList<Server> servers, FileWriter input) throws IOException {
         HTMLStructure report = new HTMLStructure();
-        Table table  =new Table(args,output);
+        ServersHandler handler  =new ServersHandler();
+        handler.findMaxPing(servers);
         input.write(report.getHeader());
         input.write(report.getTableStyle());
         input.write(report.getEndOfHeader());
         input.write(report.getTableCaption());
-        for (int i = 0 ; i < table.getListLength(); i++) {
-            input.write(table.formString(i));
+        for (int i = 0 ; i < servers.size() ; i++) {
+            input.write( handler.formString(servers.get(i), i));
         }
         input.write(report.getFooter());
 
