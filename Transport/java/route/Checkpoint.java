@@ -12,27 +12,26 @@ public class Checkpoint {
 
     /**
      * costructor to create checkpoint as X and Y coordinates
-     * @param output
-     * @throws NumberFormatException
+     * @param coordX
+     * @param coordY
      */
-    public Checkpoint(Scanner output) throws NumberFormatException {
-        setCoordX(output);
-        setCoordY(output);
+    public Checkpoint(double coordX, double coordY)  {
+        setCoordX(coordX);
+        setCoordY(coordY);
     }
 
     /**
-     * set X coordinate from file
-     * @param output
+     * set X coordinate
      */
-    private void setCoordX(Scanner output) {
-        this.coordX =Double.parseDouble(output.next());
+    private void setCoordX(double coordX) {
+        this.coordX = coordX;
     }
     /**
-     * set Y coordinate from file
-     * @param output
+     * set Y coordinate
+     * @param coordY
      */
-    private void setCoordY(Scanner output) {
-        this.coordY =Double.parseDouble(output.next());
+    private void setCoordY(double coordY) {
+        this.coordY = coordY;
     }
 
     /**

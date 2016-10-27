@@ -14,11 +14,12 @@ public class Path {
     /**
      * create path as a list of checkpoints
      * @param output
+     * @throws NumberFormatException
      */
-    public void createPath(Scanner output) {
+    public void createPath(Scanner output) throws NumberFormatException {
 
         while (output.hasNext()) {
-            path.add(new Checkpoint(output));
+            path.add(new Checkpoint(Double.parseDouble(output.next()),Double.parseDouble(output.next())));
         }
     }
     /**
@@ -28,10 +29,10 @@ public class Path {
         return path.size();
     }
     /**
-     * @param hash
+     * @param numberInListOfCheckpoints
      * @return certain Checkpoint
      */
-    public Checkpoint getCertainCheckpoint(int hash) {
-        return path.get(hash);
+    public Checkpoint getCertainCheckpoint(int numberInListOfCheckpoints) {
+        return path.get(numberInListOfCheckpoints);
     }
 }
