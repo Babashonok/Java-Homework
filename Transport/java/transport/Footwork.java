@@ -10,6 +10,14 @@ public class Footwork implements Moveable {
     private double speed = 5;
 
     /**
+     * contructor that initialize footwork speed
+     * @param speed
+     */
+    public Footwork(double speed) {
+        this.speed = speed;
+    }
+
+    /**
      * interface method that gives object an ability to determine oneself speed
      * @return
      */
@@ -31,6 +39,5 @@ public class Footwork implements Moveable {
      */
     public String getInfoAboutMoves(DistanceCounter counter) {
         return "Footwork : path time = " + findPathTime(counter) + " | cost per person = 0";
-
     }
 }

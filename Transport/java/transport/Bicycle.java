@@ -7,7 +7,15 @@ import tat.bsu.route.DistanceCounter;
  */
 public class Bicycle implements Moveable {
 
-    private double speed = 30;
+    private double speed;
+
+    /**
+     * contructor that initialize bicycle speed
+     * @param speed
+     */
+    public Bicycle(double speed) {
+        this.speed = speed;
+    }
 
     /**
      * interface method that gives object an ability to determine oneself speed
