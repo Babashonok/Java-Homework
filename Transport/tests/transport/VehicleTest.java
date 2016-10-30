@@ -18,16 +18,14 @@ public class VehicleTest {
 
     }
 
-    Path path;
-    DistanceCounter counter;
+    Path path = new Path();
+    DistanceCounter counter = new DistanceCounter();
 
     @Before
     public void setUp() throws Exception {
-        path = new Path();
         path.addCheckpointToThePath(new Checkpoint(100.0, 100.0));
         path.addCheckpointToThePath(new Checkpoint(100.0, 0));
-        counter = new DistanceCounter(path);
-        counter.getWholeDistance();
+        counter.findWholeDistance(path);
     }
 
     @Test
@@ -60,11 +58,13 @@ public class VehicleTest {
         double pathTime = vehicle.findPathTime(counter);
         assertEquals(1.0, pathTime, 0.00001);
     }
-    @Test
-    public void findTimeOfTravelWithZeroSpeed() throws Exception {
-        Vehicle vehicle = new Vehicle(0.0, 20.0, 5);
-        double pathTime = vehicle.findPathTime(counter);
-        assertEquals(Double.POSITIVE_INFINITY, pathTime, 10e+6);
+    @Test(expected = IllegalArgumentException.class)
+    public void testExceptionOfTravelWithZeroSpeed() throws Exception {
+        Vehicle vehicle = new Vehicle(0.0, 20.0, 2);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void testExceptionOfTravelWithNoPassangers() throws Exception {
+        Vehicle vehicle = new Vehicle(50.0, 20.0, 0);
     }
     @Test(expected = IllegalArgumentException.class)
     public void catchExceptionOfOneNoNubmerCharacteristic() {
@@ -73,6 +73,28 @@ public class VehicleTest {
     @Test(expected = IllegalArgumentException.class)
     public void catchExceptionOfAllNoNubmersCharacteristics() {
         Vehicle vehicle = new Vehicle(Double.parseDouble("test"),Double.parseDouble("test"), Integer.parseInt("test"));
+    }
+    @Test
+    public void testCostPerPersonWithPassangersAndPositiveConsumption() {
+        Vehicle vehicle = new Vehicle(100, 20.0, 5);
+        double cost = vehicle.getCostPerPerson(counter);
+        assertEquals(4.0, cost, 0.00001);
+    }
+    @Test
+    public void testCostPerPersonWithPassangersAndNegativeConsumption() {
+        Vehicle vehicle = new Vehicle(100, -20.0, 5);
+        double cost = vehicle.getCostPerPerson(counter);
+        assertEquals(4.0, cost, 0.00001);
+    }
+    @Test
+    public void testCostPerPersonWithPassangersAndZeroConsumption() {
+        Vehicle vehicle = new Vehicle(100, 0.0, 5);
+        double cost = vehicle.getCostPerPerson(counter);
+        assertEquals(0.0, cost, 0.00001);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void CheckExceptionOfNoPassangers() {
+        Vehicle vehicle = new Vehicle(100, 20.0, 0);
     }
 
 }

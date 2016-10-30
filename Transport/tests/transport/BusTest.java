@@ -13,7 +13,7 @@ public class BusTest {
     }
     @Test(expected = IllegalArgumentException.class)
     public void catchExceptionOfAllNoNubmersCharacteristics() {
-        Bus bus = new Bus(Double.parseDouble("test"), Double.parseDouble("test"), Integer.parseInt("test"));
+        Bus bus = new Bus(Double.parseDouble("test"),Double.parseDouble("test"), Integer.parseInt("test"));
     }
 
 }
