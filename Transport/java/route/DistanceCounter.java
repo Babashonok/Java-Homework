@@ -24,7 +24,7 @@ public class DistanceCounter  {
     public double findWholeDistance (Path path) {
         int tempDistance = 0 ;
         for (int i = 1; i<path.getAmountOfCheckpoints() ; i++ ) {
-            tempDistance += findDistanceBetweenTwoCheckpoints(path.getCertainCheckpoint(i-1), path.getCertainCheckpoint(i));
+            tempDistance += findDistanceBetweenTwoCheckpoints(path.getCertainCheckpoint(i - 1), path.getCertainCheckpoint(i));
         }
         return  tempDistance;
     }
@@ -36,8 +36,8 @@ public class DistanceCounter  {
      * @return
      */
     public double findDistanceBetweenTwoCheckpoints(Checkpoint currentCheckpoint, Checkpoint nextCheckpoint) {
-        return Math.sqrt((Math.pow(nextCheckpoint.getCoordX()- currentCheckpoint.getCoordX(), 2.0))
-                + (Math.pow(nextCheckpoint.getCoordY()- currentCheckpoint.getCoordY(), 2.0)));
+        return Math.sqrt((Math.pow(nextCheckpoint.getCoordX() - currentCheckpoint.getCoordX(), 2.0))
+                + (Math.pow(nextCheckpoint.getCoordY() - currentCheckpoint.getCoordY(), 2.0)));
 
     }
 
