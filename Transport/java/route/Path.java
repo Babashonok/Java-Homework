@@ -32,7 +32,7 @@ public class Path {
     /**
      * @return amount of Checkpoints
      */
-    public  int getAmountOfCheckpoints() {
+    public int getAmountOfCheckpoints() {
         return path.size();
     }
     /**

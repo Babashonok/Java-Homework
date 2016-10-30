@@ -1,5 +1,7 @@
 package tat.bsu.route;
 
+import java.util.EmptyStackException;
+
 /**
  * Class used for couting distances
  * (between stations or whole path)
@@ -8,25 +10,19 @@ public class DistanceCounter  {
     private double distance;
 
     /**
-     * constructor that initialize field distance
-     * as distance of whole path
-     * @param path
-     */
-    public DistanceCounter(Path path) {
-        this.distance = findWholeDistance(path);
-    }
-
-    /**
      * find distance of whole path as sum of distances between checkpoints
      * @param path
      * @return
      */
-    public double findWholeDistance (Path path) {
+    public double findWholeDistance (Path path) throws NullPointerException {
+        if (path.getAmountOfCheckpoints() == 0) {
+            throw new NullPointerException();
+        }
         int tempDistance = 0 ;
         for (int i = 1; i<path.getAmountOfCheckpoints() ; i++ ) {
             tempDistance += findDistanceBetweenTwoCheckpoints(path.getCertainCheckpoint(i - 1), path.getCertainCheckpoint(i));
         }
-        return  tempDistance;
+        return  this.distance = tempDistance;
     }
 
     /**
