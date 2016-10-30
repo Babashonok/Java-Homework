@@ -61,7 +61,8 @@ public class Main {
             TransportList transportList = createTransportList();
             Path path =new Path();
             path.createPath(getOutputFile());
-            DistanceCounter counter = new DistanceCounter(path);
+            DistanceCounter counter = new DistanceCounter();
+            counter.findWholeDistance(path);
 
             ObsessionHandler handler = new ObsessionHandler();
             if (handler.checkPathObsession(path.getCertainCheckpoint(0), path.getCertainCheckpoint(path.getAmountOfCheckpoints() - 1))) {
@@ -74,13 +75,12 @@ public class Main {
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
             System.exit(1);
-        } catch (NumberFormatException  e) {
-            System.out.println("Error in the number format , try to use only decimal numbers ");
+        } catch (NumberFormatException | NullPointerException e) {
+            System.out.println("Error in the coordinates format , try to input at least one and use only decimal numbers ");
             System.exit(1);
         } catch (IllegalArgumentException e) {
             System.out.println("Error, try to use numbers in operatable range ( <sqrt(MAX_VALUE) ) ");
             System.exit(1);
         }
-
     }
 }
