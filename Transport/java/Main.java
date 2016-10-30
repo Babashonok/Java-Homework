@@ -70,13 +70,17 @@ public class Main {
             }
 
             transportList.outputStat(counter);
-
+            getOutputFile().close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found");
             System.exit(1);
-        } catch (NumberFormatException e) {
-            System.out.println("Error in the number format , try to use only decimal numbers");
+        } catch (NumberFormatException  e) {
+            System.out.println("Error in the number format , try to use only decimal numbers ");
+            System.exit(1);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Error, try to use numbers in operatable range ( <sqrt(MAX_VALUE) ) ");
             System.exit(1);
         }
+
     }
 }
