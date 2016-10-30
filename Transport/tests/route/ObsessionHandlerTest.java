@@ -10,12 +10,7 @@ import static org.junit.Assert.*;
  */
 public class ObsessionHandlerTest {
 
-    ObsessionHandler handler;
-
-    @Before
-    public void setUp() throws Exception {
-        handler = new ObsessionHandler();
-    }
+    ObsessionHandler handler = new ObsessionHandler();
 
     @Test
     public void checkTwoCheckpointsWithEqualCoordinates() throws Exception {

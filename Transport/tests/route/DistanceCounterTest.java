@@ -11,28 +11,18 @@ import static org.junit.Assert.*;
  */
 public class DistanceCounterTest {
 
-    Path path;
-    DistanceCounter counter;
-    @Before
-    public void setUp() throws Exception {
-        path = new Path();
-        counter = new DistanceCounter(path);
-    }
+    Path  path = new Path();
+    DistanceCounter counter = new DistanceCounter();
+
 
     @Test
     public void findWholeDistanceOfThreeCheckpointsPath()  {
         path.addCheckpointToThePath(new Checkpoint(1.0, 0.0));
         path.addCheckpointToThePath(new Checkpoint(2.0, 0.0));
         path.addCheckpointToThePath(new Checkpoint(2.0, 2.0));
-        double distance  = counter.findWholeDistance(path);
+        double distance = counter.findWholeDistance(path);
         assertEquals(3.0, distance , 0.00001);
     }
-    @Test
-    public void returnZeroIfPathHasNoCheckpoints()  {
-        double distance  = counter.findWholeDistance(path);
-        assertEquals(0.0, distance , 0.00001);
-    }
-
     @Test
     public void findDistanceBetweenTwoCheckpointsWithPosiviteCoordinates()  {
         Checkpoint point1 = new Checkpoint(1.0, 1.0);
