@@ -15,6 +15,9 @@ public class Footwork implements Moveable {
      * @param speed
      */
     public Footwork(double speed) throws IllegalArgumentException {
+        if (Double.valueOf(speed).compareTo(Double.valueOf(0)) == 0) {
+            throw new IllegalArgumentException();
+        }
         this.speed = Math.abs(speed);
     }
 

@@ -15,6 +15,9 @@ public class Bicycle implements Moveable {
      * @param speed
      */
     public Bicycle(double speed) throws IllegalArgumentException {
+        if (Double.valueOf(speed).compareTo(Double.valueOf(0)) == 0) {
+            throw new IllegalArgumentException();
+        }
         this.speed = Math.abs(speed);
     }
 
