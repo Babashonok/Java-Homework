@@ -11,10 +11,11 @@ public class Bicycle implements Moveable {
 
     /**
      * contructor that initialize bicycle speed
+     * if characreristic has negative value, remake it to the positive value
      * @param speed
      */
-    public Bicycle(double speed) {
-        this.speed = speed;
+    public Bicycle(double speed) throws IllegalArgumentException {
+        this.speed = Math.abs(speed);
     }
 
     /**

@@ -11,10 +11,11 @@ public class Footwork implements Moveable {
 
     /**
      * contructor that initialize footwork speed
+     * if characreristic has negative value, remake it to the positive value
      * @param speed
      */
-    public Footwork(double speed) {
-        this.speed = speed;
+    public Footwork(double speed) throws IllegalArgumentException {
+        this.speed = Math.abs(speed);
     }
 
     /**
