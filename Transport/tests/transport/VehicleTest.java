@@ -11,12 +11,7 @@ import static org.junit.Assert.*;
 /**
  * test class Vehicle
  */
-public class VehicleTest {
-
-    @Test
-    public void getInfoAboutMoves() throws Exception {
-
-    }
+public class VehicleTest {   
 
     Path path = new Path();
     DistanceCounter counter = new DistanceCounter();
