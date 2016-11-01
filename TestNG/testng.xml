@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All Tests" verbose="5">
+    <test name="vehicle">
+        <classes>
+            <class name="tat.bsu.transport.VehicleTest"></class>
+        </classes>
+    </test>
+    <test name="bus">
+        <classes>
+            <class name="tat.bsu.transport.BusTest"></class>
+        </classes>
+    </test>
+    <test name="car">
+        <classes>
+            <class name="tat.bsu.transport.CarTest"></class>
+        </classes>
+    </test>
+    <test name="bicycle">
+        <classes>
+            <class name="tat.bsu.transport.BicycleTest"></class>
+        </classes>
+    </test>
+    <test name="footwork">
+        <classes>
+            <class name="tat.bsu.transport.FootworkTest"></class>
+        </classes>
+    </test>
+    <test name="otherClasses">
+        <classes>
+            <class name="tat.bsu.transport.DoubleValidatorTest"></class>
+            <class name="tat.bsu.route.CheckpointTest"></class>
+            <class name="tat.bsu.route.DistanceCounterTest"></class>
+            <class name="tat.bsu.route.NullPointerHandlerTest"></class>
+            <class name="tat.bsu.route.ObsessionHandlerTest"></class>
+        </classes>
+    </test>
+</suite>
