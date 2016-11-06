@@ -17,7 +17,7 @@ public class Bus extends Vehicle implements Moveable{
      * @param consumption100Km
      * @param numberOfPassangers
      */
-    public Bus(double speed, double consumption100Km, int numberOfPassangers) {
+    public Bus(double speed, double consumption100Km, int numberOfPassangers) throws IllegalArgumentException {
         super(speed, consumption100Km, numberOfPassangers);
     }
     /**

@@ -17,15 +17,22 @@ public class Path {
      * @throws NumberFormatException
      */
     public void createPath(Scanner output) throws NumberFormatException {
-
         while (output.hasNext()) {
-            path.add(new Checkpoint(Double.parseDouble(output.next()),Double.parseDouble(output.next())));
+            path.add(new Checkpoint(Double.parseDouble(output.next()), Double.parseDouble(output.next())));
         }
+    }
+
+    /**
+     * gives possibility to add user-made checkpoint to the end of the path
+     * @param checkpoint
+     */
+    public void addCheckpointToThePath(Checkpoint checkpoint) {
+        path.add(checkpoint);
     }
     /**
      * @return amount of Checkpoints
      */
-    public  int getAmountOfCheckpoints() {
+    public int getAmountOfCheckpoints() {
         return path.size();
     }
     /**

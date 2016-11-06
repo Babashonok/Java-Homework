@@ -15,11 +15,13 @@ public class Checkpoint {
      * @param coordX
      * @param coordY
      */
-    public Checkpoint(double coordX, double coordY)  {
+    public Checkpoint(double coordX, double coordY)  throws IllegalArgumentException {
+        if (Math.abs(coordX) > (Math.sqrt(Double.MAX_VALUE)) || Math.abs(coordY) > Math.sqrt(Double.MAX_VALUE)) {
+            throw new IllegalArgumentException();
+        }
         setCoordX(coordX);
         setCoordY(coordY);
     }
-
     /**
      * set X coordinate
      */

@@ -2,6 +2,8 @@ package tat.bsu.transport;
 
 import tat.bsu.route.DistanceCounter;
 
+import java.util.Map;
+
 /**
  * parent class for every object that requires oil
  */
@@ -13,14 +15,18 @@ public class Vehicle implements Moveable{
 
     /**
      * constructor that initializes characteristics of Vehicle
+     * if characreristic has negative value, remake it to the positive value
      * @param speed
      * @param consumption100Km
      * @param numberOfPassangers
      */
-    public Vehicle(double speed, double consumption100Km, int numberOfPassangers) {
-        this.speed = speed;
-        this.consumption100Km = consumption100Km;
-        this.numberOfPassangers = numberOfPassangers;
+    public Vehicle(double speed, double consumption100Km, int numberOfPassangers) throws IllegalArgumentException {
+        if (Double.valueOf(speed).compareTo(Double.valueOf(0)) == 0 || numberOfPassangers == 0) {
+            throw new IllegalArgumentException();
+        }
+        this.speed = Math.abs(speed);
+        this.consumption100Km = Math.abs(consumption100Km);
+        this.numberOfPassangers = Math.abs(numberOfPassangers);
     }
 
     /**
@@ -56,7 +62,16 @@ public class Vehicle implements Moveable{
      */
     public String getInfoAboutMoves(DistanceCounter counter) {
         return this.getClass().getName() + " : path time = " + findPathTime(counter) + " | cost per person = "
-                + findConsumption(counter) / getNumberOfPassangers();
+                + getCostPerPerson(counter);
+    }
+
+    /**
+     * count cost per person as quotient of consumption waste to number of passanger
+     * @param counter
+     * @return
+     */
+    public double getCostPerPerson(DistanceCounter counter){
+        return findConsumption(counter) / getNumberOfPassangers();
     }
 
     /**
