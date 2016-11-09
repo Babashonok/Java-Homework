@@ -54,7 +54,7 @@ public class DataProviders {
                                     new BigDecimal(attrs.getNamedItem(SIDE_B).getNodeValue()),
                                     new BigDecimal(attrs.getNamedItem(SIDE_C).getNodeValue())}),
                     attrs.getNamedItem(MESSAGE).getNodeValue()
-                 };
+            };
         }
     return triangles;
     }
@@ -78,7 +78,7 @@ public class DataProviders {
         Document document = getDocument();
         NodeList nodes = document.getElementsByTagName(INVALID);
         Object[][] triangles = new Object[nodes.getLength()][];
-        for (int i = 0 ; i < nodes.getLength() ; i++) {
+        for (int i = 0; i < nodes.getLength(); i++) {
             NamedNodeMap attrs = nodes.item(i).getAttributes();
             triangles[i] = new Object[] {
                     attrs.getNamedItem(STRING) == null ? null : new BigDecimal(attrs.getNamedItem(STRING).getNodeValue())
