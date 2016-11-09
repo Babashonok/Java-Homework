@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <data>
+        <triangleData>
+            <triangle side_a="2" side_b="3" side_c="4" typeMessage="This triangle is common"/>
+            <triangle side_a="4" side_b="2" side_c="3" typeMessage="This triangle is common"/>
+            <triangle side_a="3" side_b="4" side_c="2" typeMessage="This triangle is common"/>
+            <triangle side_a="2" side_b="2" side_c="3" typeMessage="This triangle is isosceles"/>
+            <triangle side_a="3" side_b="2" side_c="2" typeMessage="This triangle is isosceles"/>
+            <triangle side_a="2" side_b="3" side_c="2" typeMessage="This triangle is isosceles"/>
+            <triangle side_a="5" side_b="5" side_c="5" typeMessage="This triangle is equilateral so as isosceles"/>
+            <nonExist side_a="2" side_b="3" side_c="5"/>
+            <nonExist side_a="5" side_b="2" side_c="3"/>
+            <nonExist side_a="3" side_b="5" side_c="2"/>
+            <nonExist side_a="2" side_b="3" side_c="100"/>
+            <nonExist side_a="3" side_b="100" side_c="2"/>
+            <nonExist side_a="100" side_b="2" side_c="3"/>
+        </triangleData>
+        <invalidInput>
+            <invalid string="0"/>
+            <invalid string="0.0"/>
+            <invalid string="-1e1000"/>
+            <invalid string="-1"/>
+            <invalid string="-1.1"/>
+            <invalid/>
+        </invalidInput>
+    </data>
