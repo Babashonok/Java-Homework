@@ -6,15 +6,12 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
 
-
 /**
  * Entity to work with code duplication in data providers
  */
 public class DuplicateCode {
 
     private static final String filePath = "data.xml";
-
-
     private NodeList nodes;
 
     /**
@@ -29,9 +26,7 @@ public class DuplicateCode {
         DocumentBuilder builder = factory.newDocumentBuilder();
         Document document = builder.parse(file);
         nodes = document.getElementsByTagName(message);
-
     }
-
     /**
      * return empty mathix of objects
      * number of string = number of elements with equal tag name in XML file
@@ -40,7 +35,6 @@ public class DuplicateCode {
     public Object [][] getMatrixOfObjects() {
         return new Object[nodes.getLength()][];
     }
-
     /**
      * return list of nodes with equal tag name
      * @return
