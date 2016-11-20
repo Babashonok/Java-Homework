@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <commands>
+        <command name="open" variable="http://www.google.com" timeout="3"/>
+        <command name="checkPageContains" variable="Google timer"/>
+        <command name="checkPageTitle" variable="Google"/>
+        <command name="checkLinkPresentByHref" variable="http://www.tutututut.by"/>
+    </commands>

@@ -1,0 +1,10 @@
+{
+  "commands": {
+    "command": [
+      {"name": "open", "variable": "http://www.google.com", "timeout": "3"},
+      {"name": "checkPageContains", "variable": "Google fail"},
+      {"name": "checkPageTitle", "variable": "Google"},
+      {"name": "checkLinkPresentByHref", "variable": "http://www.tutututut.by"}
+    ]
+  }
+}
