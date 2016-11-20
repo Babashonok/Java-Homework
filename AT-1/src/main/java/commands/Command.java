@@ -38,6 +38,10 @@ public abstract class Command {
      * @param end System time in the end of performing
      */
     public void setTimeSpend(long start, long end) {
-        this.timeSpend  = ((double)end - (double)start) / 1000;
+        this.timeSpend  = ((double)end - (double)start)/1000;
     }
+
+
+
+
 }
