@@ -72,6 +72,4 @@ public class TestReport {
     public double getTimeSpend() {
         return timeSpend;
     }
-
-
 }
