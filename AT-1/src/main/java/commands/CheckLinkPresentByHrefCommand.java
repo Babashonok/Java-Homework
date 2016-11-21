@@ -23,7 +23,7 @@ public class CheckLinkPresentByHrefCommand extends Command {
         this.isPerformed = true;
         long start = System.currentTimeMillis();
         try{
-            driver.findElement(By.xpath(inputCommand.get(1)));
+            webDriver.findElement(By.xpath("//a[@href='" + inputCommand.get(1) + "']"));
         }catch(NoSuchElementException e){
             this.isPerformed = false;
         }
