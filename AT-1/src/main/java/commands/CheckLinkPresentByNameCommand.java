@@ -24,7 +24,7 @@ public class CheckLinkPresentByNameCommand extends Command {
         this.isPerformed = true;
         long start = System.currentTimeMillis();
         try{
-            driver.findElement(By.name(inputCommand.get(1).replaceAll("\"", "")));
+            driver.findElement(By.xpath("//a[text()='" + inputCommand.get(1).replaceAll("\"", "") + "']"));
         }catch(NoSuchElementException e){
             this.isPerformed = false;
         }
