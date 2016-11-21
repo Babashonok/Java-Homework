@@ -45,19 +45,18 @@ public class JSONHandler extends FileHandler implements Reportable{
     }
 
     /**
-     *
-     * @param jsonCommand
-     * @param i
-     * @return
-     * @throws JSONException
+     * read JSON object arguments from .json file
+     * @param jsonCommand JSON element from the array
+     * @param i number of the element in the array
+     * @return name and arguments of the command as arrayList <String>
+     * @throws JSONException exception during Json proccess getting in parsing from file
      */
     private ArrayList<String> read(JSONArray jsonCommand, int i) throws JSONException {
         ArrayList <String> tempList = new ArrayList<>();
-        tempList.add(jsonCommand.get(i).toString());
-        System.out.println(tempList.get(0));
-        //tempList.add(jsonCommand.getJSONObject(i).getString("variable"));
+        tempList.add(jsonCommand.get(i).toString());        
+        tempList.add(jsonCommand.getJSONObject(i).getString("variable"));
         if (tempList.get(0).equals("open")) {
-          //  tempList.add(jsonCommand.getJSONObject(i).getString("timeout"));
+           tempList.add(jsonCommand.getJSONObject(i).getString("timeout"));
         }
         return tempList;
     }
