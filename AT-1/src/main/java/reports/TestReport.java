@@ -36,7 +36,7 @@ public class TestReport {
         if (!isPerformed) {
             mark = "!";
         }
-        return mark + " [" + createCommandMessage(inputCommand) + "]" + timeSpend;
+        return mark + " [" + createCommandMessage(inputCommand) + "] " + timeSpend;
         }
 
     /**
@@ -47,7 +47,7 @@ public class TestReport {
     private String createCommandMessage(ArrayList<String> inputCommand) {
         String commandMessage = inputCommand.get(0);
         for (int i = 1; i < inputCommand.size(); i++) {
-            commandMessage = commandMessage + " " + inputCommand.get(i);
+            commandMessage = commandMessage + " " + "\"" + inputCommand.get(i).replaceAll("\"", "")  + "\"";
         }
         return commandMessage;
     }
