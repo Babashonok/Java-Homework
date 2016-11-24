@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="147" lt="147" ts="1480018602058" s="true" lb="/avatar/d7a973c7dab26985da5f961be7b74480" rc="200" rm="OK" tn="Thread Group 1-1" dt="bin" by="2758"/>
+<httpSample t="75" lt="75" ts="1480018602682" s="true" lb="/avatar/d7a973c7dab26985da5f961be7b74480" rc="200" rm="OK" tn="Thread Group 1-2" dt="bin" by="2758"/>
+<httpSample t="81" lt="81" ts="1480018602900" s="true" lb="/avatar/d7a973c7dab26985da5f961be7b74480" rc="200" rm="OK" tn="Thread Group 1-3" dt="bin" by="2758"/>
+<httpSample t="125" lt="125" ts="1480018605162" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-1" dt="bin" by="1654"/>
+<httpSample t="84" lt="83" ts="1480018605211" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-2" dt="bin" by="1654"/>
+<httpSample t="120" lt="119" ts="1480018605182" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-3" dt="bin" by="1654"/>
+<httpSample t="123" lt="123" ts="1480018607245" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="746"/>
+<httpSample t="153" lt="153" ts="1480018607216" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="746"/>
+<httpSample t="123" lt="123" ts="1480018607259" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-3" dt="text" by="746"/>
+<httpSample t="186" lt="185" ts="1480018609963" s="true" lb="/" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="788"/>
+<httpSample t="170" lt="170" ts="1480018609986" s="true" lb="/" rc="200" rm="OK" tn="Thread Group 1-3" dt="text" by="788"/>
+<httpSample t="198" lt="194" ts="1480018609972" s="true" lb="/" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="788"/>
+<httpSample t="78" lt="78" ts="1480018611445" s="true" lb="/" rc="200" rm="OK" tn="Thread Group 1-3" dt="text" by="788"/>
+<httpSample t="86" lt="86" ts="1480018611465" s="true" lb="/" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="788"/>
+<httpSample t="95" lt="95" ts="1480018611443" s="true" lb="/" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="788"/>
+<httpSample t="72" lt="72" ts="1480018612218" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="746"/>
+<httpSample t="81" lt="81" ts="1480018612216" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-3" dt="text" by="746"/>
+<httpSample t="87" lt="87" ts="1480018612232" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="746"/>
+<httpSample t="75" lt="75" ts="1480018613606" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="746"/>
+<httpSample t="59" lt="59" ts="1480018613624" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-3" dt="text" by="746"/>
+<httpSample t="81" lt="72" ts="1480018613637" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="746"/>
+<httpSample t="74" lt="73" ts="1480018615002" s="true" lb="/" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="788"/>
+<httpSample t="77" lt="77" ts="1480018615017" s="true" lb="/" rc="200" rm="OK" tn="Thread Group 1-3" dt="text" by="788"/>
+<httpSample t="79" lt="79" ts="1480018615022" s="true" lb="/" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="788"/>
+<httpSample t="64" lt="64" ts="1480018615647" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="746"/>
+<httpSample t="80" lt="79" ts="1480018616465" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="746"/>
+<httpSample t="113" lt="113" ts="1480018616458" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-3" dt="text" by="746"/>
+<httpSample t="71" lt="71" ts="1480018618076" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-2" dt="text" by="746"/>
+<httpSample t="66" lt="65" ts="1480018618100" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="746"/>
+<httpSample t="71" lt="71" ts="1480018618107" s="true" lb="/ocsp" rc="200" rm="OK" tn="Thread Group 1-3" dt="text" by="746"/>
