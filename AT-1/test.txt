@@ -1,0 +1,6 @@
+open "http://www.google.com" "3"
+checkPageTitle "Google"
+open "http://www.yahoo.com" "3"
+checkPageContains "Google fail"
+checkPageTitle "Yahoo"
+checkLinkPresentByHref "http://www.tutututut.by"

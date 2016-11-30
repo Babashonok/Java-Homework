@@ -1,0 +1,8 @@
++ [open http://www.google.com 3]1.375
+! [checkPageContains Google timer]0.015
++ [checkPageTitle Google]0.0
+! [checkLinkPresentByHref http://www.tutututut.by]0.422
+Total tests: 4
+Passed/Failed: 2/2
+Total time: 1,812
+Avegare time: 0,453
