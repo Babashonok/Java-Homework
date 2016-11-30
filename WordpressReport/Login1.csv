@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>			
+<testResults version="1.2">			
+<httpSample t="170" lt="170" ts="1480019964588" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-1" dt="bin" by="1430"/>			
+<httpSample t="92" lt="91" ts="1480019965641" s="true" lb="/avatar/d7a973c7dab26985da5f961be7b74480" rc="200" rm="OK" tn="Thread Group 1-1" dt="bin" by="3337"/>			
+<httpSample t="70" lt="70" ts="1480019966158" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-1" dt="bin" by="1693"/>			
+			
+			
+			

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+<testResults version="1.2">	
+<httpSample t="160" lt="160" ts="1480020492005" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-1" dt="bin" by="1430"/>	
+<httpSample t="102" lt="102" ts="1480020492438" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-2" dt="bin" by="1430"/>	
+<httpSample t="100" lt="100" ts="1480020493035" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-3" dt="bin" by="1430"/>	
+<httpSample t="89" lt="87" ts="1480020494865" s="true" lb="/avatar/d7a973c7dab26985da5f961be7b74480" rc="200" rm="OK" tn="Thread Group 1-1" dt="bin" by="3337"/>	
+<httpSample t="130" lt="130" ts="1480020495926" s="true" lb="/avatar/d7a973c7dab26985da5f961be7b74480" rc="200" rm="OK" tn="Thread Group 1-2" dt="bin" by="3337"/>	
+<httpSample t="124" lt="124" ts="1480020495980" s="true" lb="/avatar/d7a973c7dab26985da5f961be7b74480" rc="200" rm="OK" tn="Thread Group 1-3" dt="bin" by="3337"/>	
+<httpSample t="45" lt="45" ts="1480020496193" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-1" dt="bin" by="1693"/>	
+<httpSample t="41" lt="41" ts="1480020497021" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-2" dt="bin" by="1693"/>	
+<httpSample t="48" lt="47" ts="1480020497023" s="true" lb="/avatar/34734ac8fd7cfd12515e264d32715f3d" rc="200" rm="OK" tn="Thread Group 1-3" dt="bin" by="1693"/>	

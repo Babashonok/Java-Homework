@@ -1,0 +1,23 @@
+Virtual mashine manager : Oracle VM VirtualBox 5.1.10r112026 (Qt5.6.2)
+OS : Ubuntu 14.04 LTS
+RAM : 1400 MB
+Acceleration : PAE/NX paravirtualization KVM
+Carriers : Controller SATA port 0 (Ubuntu.vdi)
+...
+Load Profile :
+
+Operation                  | Number of Threads | Average Sample Time, ms
+Searching text in wordp-   |         3         |       998
+ress/wp-admin page 3 times |                   |        
+Login                      |         1         |        332
+Login                      |         3         |        294
+Login                      |        10         |        512   
+Login                      |        15         |        486 
+Login                      |        20         |        440
+
+Conclusion :
+During the execution of the profile loading main goal was :  testing the extreme response time during
+simultaneous multiple users login. 
+The lagrest time span in login load test was 1252 ms in 10 threads login loading test.
+When the amount of threads increased , avegare and highest response time still was in stable state.
+A further increase of threads would be impratical besause of lack of computer operating capabilities.
