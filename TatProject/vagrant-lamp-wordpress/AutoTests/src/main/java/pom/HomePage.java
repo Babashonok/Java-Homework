@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import user.User;
 
 /**
- * Created by alexeybabak on 18.12.16.
+ *Page Object for /Host_name web page
  */
 public class HomePage extends AbstractPage {
 

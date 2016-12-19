@@ -9,9 +9,6 @@ import org.testng.annotations.*;
 import static java.lang.Thread.sleep;
 import static org.testng.Assert.*;
 
-/**
- * Created by alexeybabak on 18.12.16.
- */
 public class ProfilePageTest {
 
     private WebDriver driver ;

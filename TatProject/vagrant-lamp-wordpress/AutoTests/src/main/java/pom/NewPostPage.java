@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by alexeybabak on 19.12.16.
+ * Page Object for /Host_name/wp-admin/post-new.php web page
  */
 public class NewPostPage extends AbstractPage {
     private By postTitleLocator = By.xpath("//input[@id='title']");

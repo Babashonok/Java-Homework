@@ -7,7 +7,7 @@ import user.User;
 import user.UserMeta;
 
 /**
- * Created by alexeybabak on 18.12.16.
+ * Storage for Objects that will be used during test run
  */
 public class Data {
 

@@ -7,10 +7,6 @@ import org.testng.annotations.*;
 import static org.testng.Assert.*;
 import org.openqa.selenium.WebDriver;
 
-
-/**
- * Created by alexeybabak on 4.12.16.
- */
 public class LoginPageTest {
 
     private WebDriver driver ;
@@ -50,7 +46,7 @@ public class LoginPageTest {
     @Test
     public void negativeAuthorization() throws Exception{
         loginPage.typeUsername(commonMethods.getUser().getUser_login()).submitLoginExpectingFailure();
-        assertNotNull(loginPage.findByXPath("//div[@id='login_error']"));
+        assertNotNull(loginPage.wrongPassInfo());
     }
 
     @AfterMethod

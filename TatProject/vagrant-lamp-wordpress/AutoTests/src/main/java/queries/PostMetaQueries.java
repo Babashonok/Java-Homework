@@ -3,7 +3,7 @@ package queries;
 
 
 /**
- * Created by alexeybabak on 18.12.16.
+ * describe variety of requests to the table wp_postmeta
  */
 public class PostMetaQueries {
     private String refactoringTableName = "`wp_postmeta`";

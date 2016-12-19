@@ -3,7 +3,7 @@ package queries;
 import user.User;
 
 /**
- * Created by alexeybabak on 18.12.16.
+ * describe variety of requests to the table wp_posts
  */
 public class PostQueries {
 

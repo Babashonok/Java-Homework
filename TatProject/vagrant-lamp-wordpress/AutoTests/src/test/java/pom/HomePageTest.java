@@ -8,9 +8,6 @@ import org.testng.annotations.*;
 
 import static org.testng.Assert.*;
 
-/**
- * Created by alexeybabak on 18.12.16.
- */
 public class HomePageTest {
 
     private WebDriver driver ;

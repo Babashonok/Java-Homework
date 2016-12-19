@@ -6,7 +6,6 @@ import user.User;
 /**
  * describe variety of requests to the table wp_users
  *
- * Created by alexeybabak on 3.12.16.
  */
 public class UserQueries  {
 

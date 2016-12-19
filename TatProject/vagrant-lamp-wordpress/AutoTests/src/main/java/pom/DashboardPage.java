@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by alexeybabak on 18.12.16.
+ * Page Object for /Host_name/wp-admin/index.php web page
  */
 public class DashboardPage extends AbstractPage {
 

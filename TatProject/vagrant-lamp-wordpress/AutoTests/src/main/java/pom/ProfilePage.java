@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 /**
  * Page Object for /Host_name/wp-admin/profile.php web page
  *
- * Created by alexeybabak on 4.12.16.
  */
 public class ProfilePage extends AbstractPage {
 

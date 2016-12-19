@@ -6,7 +6,7 @@ import user.User;
 import user.UserMeta;
 
 /**
- * Created by alexeybabak on 18.12.16.
+ * Common methods in the run setUp
  */
 public class CommonMethods {
 

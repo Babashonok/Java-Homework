@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
  * abstract parent class for page objects classes
  * describe simple driver commands and close it from test logic
  *
- * Created by alexeybabak on 4.12.16.
  */
 public abstract class AbstractPage {
 

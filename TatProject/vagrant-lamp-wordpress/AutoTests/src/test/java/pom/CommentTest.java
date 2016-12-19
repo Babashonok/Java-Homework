@@ -7,9 +7,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 import static org.testng.Assert.*;
 
-/**
- * Created by alexeybabak on 19.12.16.
- */
 public class CommentTest {
 
     private WebDriver driver;

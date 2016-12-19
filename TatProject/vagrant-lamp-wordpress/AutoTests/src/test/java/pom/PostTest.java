@@ -11,12 +11,6 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-
-
-
-/**
- * Created by alexeybabak on 5.12.16.
- */
 public class PostTest {
 
     private WebDriver driver;

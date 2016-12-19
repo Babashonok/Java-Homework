@@ -2,17 +2,18 @@ package pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 /**
  * Page Object for /Host_name/wp-login.php web page
  *
- * Created by alexeybabak on 4.12.16.
  */
 public class LoginPage extends AbstractPage {
 
     private By usernameLocator = By.id("user_login");
     private By passwordLocator = By.id("user_pass");
     private By loginButtonLocator = By.id("wp-submit");
+    private By wrongPassElement = By.xpath("//div[@id='login_error']");
 
 
 
@@ -45,9 +46,6 @@ public class LoginPage extends AbstractPage {
         this.driver.findElement(loginButtonLocator).submit();
         return new LoginPage(this.driver);
     }
-    public boolean isFailed(String failMessage) {
-        return this.driver.getPageSource().contains(failMessage);
-    }
 
     public ProfilePage loginAs(String username, String password) {
         typeUsername(username);
@@ -55,4 +53,8 @@ public class LoginPage extends AbstractPage {
         submitLogin();
         return new ProfilePage(this.driver);
     }
+    public WebElement wrongPassInfo() {
+        return this.driver.findElement(wrongPassElement);
+    }
+
 }

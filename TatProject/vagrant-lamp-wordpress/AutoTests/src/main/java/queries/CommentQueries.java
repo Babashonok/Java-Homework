@@ -3,7 +3,7 @@ package queries;
 import user.User;
 
 /**
- * Created by alexeybabak on 19.12.16.
+ * describe variety of requests to the table wp_comments
  */
 public class CommentQueries {
 

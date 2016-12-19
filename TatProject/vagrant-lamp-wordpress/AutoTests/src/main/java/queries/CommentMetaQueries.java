@@ -1,7 +1,7 @@
 package queries;
 
 /**
- * Created by alexeybabak on 19.12.16.
+ * describe variety of requests to the table wp_commentmeta
  */
 public class CommentMetaQueries {
     private String refactoringTableName = "`wp_commentmeta`";
