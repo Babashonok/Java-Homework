@@ -1,7 +1,7 @@
 Tat BSU 2016
-Final Project : Vagrant, Wordpress , AutoTests
+Final Project : Vagrant, Wordpress , AutoTess
 Author : Alexey Babak
-version : 1.1
+version : 1.0
 
 This project upload Ubuntu 14.04 32-bit as  Virtual machine,
 add Apache Server, Mysql, PHP and Wordpress as VM environment.
@@ -14,8 +14,8 @@ To start the script, you should have installed virtualbox, vagrant, git, java en
 
 Installing steps :
 git clone https://github.com/Babashonok/Java-Homework.git
-cd /Java-Project/TatProject
+cd TatProject
 sh wpAutoTest.sh (NOTE : probably won't work in non-Linux OS)
 
 TODO : Cover more Wordpress functional
-
+TODO : Separate test logic and driver opetarions, using Page Objects pattern
