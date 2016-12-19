@@ -33,3 +33,5 @@ public class UserQueries  {
                 .append(DigestUtils.md5Hex(user.getUser_pass())).append("'");
         return query.toString();
     }
+
+}

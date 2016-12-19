@@ -17,7 +17,9 @@ public abstract class AbstractPage {
     public AbstractPage(WebDriver driver) {
         this.driver = driver;
     }
+
     public abstract AbstractPage open();
+
 
     public WebElement findByXPath(String xpath) {
         WebElement webElement = driver.findElement(By.xpath(xpath));

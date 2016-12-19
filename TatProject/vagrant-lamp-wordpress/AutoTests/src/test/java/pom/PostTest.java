@@ -1,47 +1,67 @@
 package pom;
 
-import org.openqa.selenium.By;
+import dataStorageForTests.CommonMethods;
+import dataStorageForTests.Data;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static org.testng.AssertJUnit.assertNotNull;
+import static org.testng.Assert.*;
+
+
+
 
 /**
  * Created by alexeybabak on 5.12.16.
  */
 public class PostTest {
 
-    WebDriver driver ;
+    private WebDriver driver;
+    private ProfilePage profilePage;
+    private CommonMethods commonMethods = CommonMethods.getInstance();
+    private Data data = Data.getInstance();
 
     @BeforeClass
-    public void beforeClass() {
-        driver = new HtmlUnitDriver();
-        driver.get("http://localhost:8888/wp-admin/profile.php");
+    public void setUser() throws Exception {
+        commonMethods.createUser(data.metaAuthorCap, data.metaAuthorLevel);
+    }
+
+    @BeforeMethod
+    public void setUp() {
+        driver = new FirefoxDriver();
+        profilePage = new LoginPage(driver).open().loginAs(commonMethods.getUser().getUser_login(),
+                commonMethods.getUser().getUser_pass());
+    }
+
+    @Test
+    public void positiveAddPostWithTitle()  {
+        NewPostPage newPostPage = profilePage.goToNewPostCreationPage();
+        newPostPage.inputTitle("Hell").publishPost();
+        assertNotNull(newPostPage.checkValidPublish());
+
     }
     @Test
-    public void positiveAddPostFromSubmenuWithTitle() {
-        driver.findElement(By.xpath("//a[@href='http://localhost:8888/wp-admin/post-new.php']")).click();
+    public void testQuickDraftPosting() throws InterruptedException {
+        DashboardPage dashboardPage = profilePage.goToDashboardPage()
+                .inputQuickDraftTitle("hello").inputQuickDraftContent("hey");
+        dashboardPage.publishQuickDraft();
+        assertNotNull(dashboardPage.checkDraftLabel());
+    }
 
-        driver.findElement(By.xpath("//input[@id='title']")).sendKeys("title");
-        driver.findElement(By.xpath("//button[@id='content-html']")).click();
-        driver.findElement(By.xpath("//textarea[@class='wp-editor-area']")).sendKeys("words");
-        try {
-            driver.wait(5);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        driver.findElement(By.xpath("//input[@id='publish']")).click();
-        WebElement checkCreation = driver.findElement(By.xpath("//a[text()='View post']"));
-        assertNotNull(checkCreation);
+
+
+    @AfterMethod
+    public void tearDown() {
+        driver.close();
+        commonMethods.deletePost();
     }
 
     @AfterClass
-    public void afterClass() {
-        driver.quit();
+    public void deleteUser() throws Exception {
+        commonMethods.deleteUser();
     }
 
 
